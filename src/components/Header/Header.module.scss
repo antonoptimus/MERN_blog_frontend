@@ -1,0 +1,32 @@
+.root {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #161515;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.5s;
+
+  &:hover {
+    color: #1976d2;
+    transform: scale(105%);
+  }
+}
+
+.buttons {
+  button {
+    margin-left: 10px;
+  }
+}
