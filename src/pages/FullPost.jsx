@@ -10,7 +10,7 @@ export const FullPost = () => {
     <>
       <Post
         id={1}
-        title="Статья 1"
+        title="Заголовок статьи"
         imageUrl="https://pclegko.ru/wp-content/uploads/2020/11/5753173610332160.png"
         user={{
           avatarUrl:
