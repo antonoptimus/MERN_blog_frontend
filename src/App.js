@@ -2,6 +2,7 @@ import Container from "@mui/material/Container";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { FullPost } from "./pages/FullPost";
+import { AddPost } from "./pages/AddPost";
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
       <Header />
       <Container maxWidth="lg">
         {/* <Home /> */}
-        <FullPost />
-        {/*<AddPost />*/}
+        {/* <FullPost /> */}
+        <AddPost />
         {/*<Login />*/}
         {/*<Registration />*/}
       </Container>
