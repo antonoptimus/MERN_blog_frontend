@@ -1,17 +1,15 @@
 import Container from "@mui/material/Container";
-import { Header } from "./components/Header";
-import { Home } from "./pages/Home";
-import { FullPost } from "./pages/FullPost";
-import { AddPost } from "./pages/AddPost";
+import { Header } from "./components";
+import { Home, FullPost, Registration, AddPost, Login } from "./pages";
 
 function App() {
   return (
     <>
       <Header />
       <Container maxWidth="lg">
-        {/* <Home /> */}
-        {/* <FullPost /> */}
-        <AddPost />
+        <Home />
+        {/*<FullPost />*/}
+        {/*<AddPost />*/}
         {/*<Login />*/}
         {/*<Registration />*/}
       </Container>

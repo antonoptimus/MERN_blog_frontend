@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Post } from "../components/Post";
-import { SideBlock } from "../components/SideBlock";
-import { SideComments } from "../components/SideComments";
-import { AddComment } from "../components/AddComment";
+
+import { Index } from "../components/AddComment";
+import { CommentsBlock } from "../components/CommentsBlock";
 
 export const FullPost = () => {
   return (
@@ -31,26 +31,27 @@ export const FullPost = () => {
           roast as hard as you can!!
         </p>
       </Post>
-      <SideBlock title="Комментарии">
-        <SideComments
-          items={[
-            {
-              user: {
-                fullName: "Борис Абраков",
-                avatarUrl: "https://mui.com/static/images/avatar/2.jpg",
-              },
-              text: "Тестовый комментарий Бориса",
+      <CommentsBlock
+        items={[
+          {
+            user: {
+              fullName: "Борис Абраков",
+              avatarUrl: "https://mui.com/static/images/avatar/2.jpg",
             },
-            {
-              user: {
-                fullName: "Екатерина Смирнова",
-                avatarUrl: "https://mui.com/static/images/avatar/4.jpg",
-              },
-              text: "Тестовый комментарий Екатерины",
+            text: "Тестовый комментарий Бориса",
+          },
+          {
+            user: {
+              fullName: "Екатерина Смирнова",
+              avatarUrl: "https://mui.com/static/images/avatar/4.jpg",
             },
-          ]}
-        />
-      </SideBlock>
+            text: "Тестовый комментарий Екатерины",
+          },
+        ]}
+        isLoading={false}
+      >
+        <Index />
+      </CommentsBlock>
     </>
   );
 };

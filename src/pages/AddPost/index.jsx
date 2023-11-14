@@ -1,12 +1,19 @@
 import React, { useCallback, useMemo, useState } from "react";
-import { Button, Paper, TextField } from "@mui/material";
+import TextField from "@mui/material/TextField";
+import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
 import SimpleMDE from "react-simplemde-editor";
 
 import "easymde/dist/easymde.min.css";
 import styles from "./AddPost.module.scss";
 
 export const AddPost = () => {
+  const imageUrl = "";
   const [value, setValue] = useState("");
+
+  const handleChangeFile = () => {};
+
+  const onClickRemoveImage = () => {};
 
   const onChange = useCallback((value) => {
     setValue(value);
@@ -32,6 +39,19 @@ export const AddPost = () => {
       <Button variant="outlined" size="large">
         Загрузить превью
       </Button>
+      <input type="file" onChange={handleChangeFile} hidden />
+      {imageUrl && (
+        <Button variant="contained" color="error" onClick={onClickRemoveImage}>
+          Удалить
+        </Button>
+      )}
+      {imageUrl && (
+        <img
+          className={styles.image}
+          src={`http://localhost:4444${imageUrl}`}
+          alt="Uploaded"
+        />
+      )}
       <br />
       <br />
       <TextField
