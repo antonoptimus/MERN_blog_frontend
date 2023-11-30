@@ -42,7 +42,11 @@ export const Home = () => {
               <Post
                 id={obj._id}
                 title={obj.title}
-                imageUrl={obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : ''}
+                imageUrl={
+                  obj.imageUrl
+                    ? `https://mern-blog-af2k.onrender.com${obj.imageUrl}`
+                    : ""
+                }
                 user={obj.user}
                 createdAt={obj.createdAt}
                 viewsCount={obj.viewsCount}
