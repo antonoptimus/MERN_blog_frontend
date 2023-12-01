@@ -25,14 +25,14 @@ export const Home = () => {
 
   return (
     <>
-      <Tabs
+      {/* <Tabs
         style={{ marginBottom: 15 }}
         value={0}
         aria-label="basic tabs example"
       >
         <Tab label="Новые" />
         <Tab label="Популярные" />
-      </Tabs>
+      </Tabs> */}
       <Grid container spacing={4}>
         <Grid xs={8} item>
           {(isPostsLoading ? [...Array(5)] : posts.items).map((obj, index) =>
@@ -59,7 +59,7 @@ export const Home = () => {
         </Grid>
         <Grid xs={4} item>
           <TagsBlock items={tags.items} isLoading={isTagsLoading} />
-          <CommentsBlock
+          {/* <CommentsBlock
             items={[
               {
                 user: {
@@ -77,7 +77,7 @@ export const Home = () => {
               },
             ]}
             isLoading={false}
-          />
+          /> */}
         </Grid>
       </Grid>
     </>
